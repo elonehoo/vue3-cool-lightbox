@@ -1,0 +1,36 @@
+{
+  "name": "vue3-cool-lightbox",
+  "version": "0.0.0",
+  "description": "Vue3 lightbox inspired by fancybox.",
+  "module": "dist/index.es.js",
+  "main": "dist/index.umd.js",
+  "typings": "dist_types/index.d.ts",
+  "files": [
+    "dist/",
+    "dist_types/"
+  ],
+  "scripts": {
+    "build:clean": "rimraf ./dist ./dist_types",
+    "build:type": "vue-tsc --declaration --emitDeclarationOnly",
+    "build:dev": "vite build",
+    "build": "pnpm run build:clean && pnpm run build:type && pnpm run build:dev"
+  },
+  "keywords": [
+    "vue3",
+    "lightbox"
+  ],
+  "author": "Elone Hoo <elonehoo@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/body-scroll-lock": "^3.1.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "body-scroll-lock": "4.0.0-beta.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.3",
+    "vue": "^3.2.45",
+    "vue-tsc": "^1.0.18"
+  },
+  "devDependencies": {
+    "@elonehoo/vite-plugin-dist-css": "^0.0.4"
+  }
+}
